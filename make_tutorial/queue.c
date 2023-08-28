@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "queue.h"
 
-
 // struct Node {
 // 	int data;
 // 	struct Node* next;
