@@ -6,10 +6,10 @@
 void serial_bfs(int **graph, int vertices) {
 	struct Queue* queue = createQueue();
 	int* visited = (int *)malloc(vertices * sizeof(int));
-    
-    for (int i = 0; i < vertices; i++) {
-        visited[i] = 0;
-    }
+	
+	for (int i = 0; i < vertices; i++) {
+		visited[i] = 0;
+	}
 
 	enqueue(queue, 0);
 	visited[0] = 1;

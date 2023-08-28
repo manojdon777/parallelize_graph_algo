@@ -1,13 +1,12 @@
-# CC=gdb gcc
 CC=gcc
 CFLAGS=-I.
-DEPS = queue.h serialbfs.h generategraph.h
+DEPS = queue.h serialbfs.h generategraph.h inputcheck.h
 
 %.o: %.c $(DEPS)
-	$(CC) -g -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
-app: main.o queue.o serialbfs.o generategraph.o
-	$(CC) -o app main.o queue.o serialbfs.o generategraph.o
+app: main.o queue.o serialbfs.o generategraph.o inputcheck.o
+	$(CC) -o app main.o queue.o serialbfs.o generategraph.o inputcheck.o
 
 clean:
 	rm -rf *.o app
