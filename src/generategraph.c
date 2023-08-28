@@ -9,7 +9,10 @@
 // } Edge;
 
 void generateGraph(int **graph, int vertices, int edges) {
-    Edge all_possible_edges[(vertices * (vertices - 1)) / 2];
+    // Edge all_possible_edges[(vertices * (vertices - 1)) / 2];
+
+    int tot_edges = (vertices * (vertices - 1)) / 2;
+    Edge* all_possible_edges = (Edge *)malloc(tot_edges * sizeof(Edge));
     int edgeIndex = 0;
     srand(time(NULL));
     
